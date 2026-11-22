@@ -1,4 +1,6 @@
-# Open Training Platform Rules
+# Lucky Learning Rules
+
+Project display name: 鹿lucky Learning. Repository name: lucky-learning.
 
 1. Keep customer code, data, credentials, media, and deployment environments isolated.
 2. Never commit `.env`, `cloudbaserc.json`, secrets, employee lists, store lists, production records, or customer media.
