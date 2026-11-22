@@ -8,8 +8,6 @@
     "packages/shared"
   ],
   "scripts": {
-    "brand:setup": "vite apps/setup --host 127.0.0.1 --port 5175",
-    "brand:build": "vite build apps/setup",
     "pretest": "npm run cloudbase:prepare-functions",
     "test": "node --test tests/*.test.js",
     "admin:dev": "npm --workspace apps/admin run dev",
@@ -24,7 +22,7 @@
     "check:isolation": "node --test tests/openSourceIsolation.test.js",
     "check:release": "node scripts/check-release-config.mjs",
     "typecheck": "npm --workspace apps/admin run typecheck && npm --workspace apps/employee run typecheck",
-    "verify": "npm run brand:validate && npm test && npm run typecheck && npm run employee:build && npm run admin:build && npm run brand:build && npm run check:isolation",
+    "verify": "npm run brand:validate && npm test && npm run typecheck && npm run employee:build && npm run admin:build && npm run check:isolation",
     "verify:release": "npm run verify && npm run check:release"
   }
 }

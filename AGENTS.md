@@ -10,3 +10,12 @@ Project display name: 鹿lucky Learning. Repository name: lucky-learning.
 6. A disabled optional module must not block learning or exams.
 7. Run focused tests, type checks, both frontend builds, and isolation checks before claiming completion.
 8. Deployment and public GitHub publishing require explicit user confirmation.
+
+## Brand Onboarding
+
+- First ask in the conversation: "请把企业 Logo 或品牌色卡发给我，我会配置到员工端和管理后台，再打开真实页面给你确认。"
+- Accept either a logo or a palette; both are optional together. Ask for a company name only when necessary. Never assume that a logo visible inside a screenshot is the original brand asset.
+- When only a logo is supplied, derive a suitable primary color and use neutral surfaces. When only colors are supplied, retain the default logo until an asset is supplied.
+- Update config/brand.json and brand/ directly. Keep business features and layout unchanged unless requested.
+- Validate contrast and brand assets, run the required checks, and show the real employee and admin pages on desktop and mobile.
+- Do not add a color picker wizard, imitation preview cards, or a configuration export step.
