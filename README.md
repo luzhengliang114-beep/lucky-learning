@@ -32,6 +32,8 @@ npm run admin:dev
 
 只有 Logo 时，可从 Logo 提取品牌主色；只有色卡时，可先应用颜色并保留默认 Logo。企业名称可一并提供。助手负责检查对比度、写入配置和验证两端展示，无需操作选色或导出页面。
 
+后续需要决定的事项采用 A／B／C 选择题，每次一题并标明推荐项。选好后汇总方案，确认一次，再完成配置和真实页面验收。
+
 同一份 `config/brand.json` 和 `brand/` 资源用于两端。开发者也可直接修改配置并运行 `npm run brand:validate`。详细流程见[企业品牌接入](docs/brand-customization.md)。
 
 ## 正式部署

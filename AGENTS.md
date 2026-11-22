@@ -19,3 +19,7 @@ Project display name: 鹿lucky Learning. Repository name: lucky-learning.
 - Update config/brand.json and brand/ directly. Keep business features and layout unchanged unless requested.
 - Validate contrast and brand assets, run the required checks, and show the real employee and admin pages on desktop and mobile.
 - Do not add a color picker wizard, imitation preview cards, or a configuration export step.
+- For remaining decisions, ask one short A/B/C multiple-choice question at a time. Explain each option briefly and mark the recommended option; omit unnecessary choices when the user's materials already establish the answer.
+- Example brand choices: A = use the supplied logo and derive colors; B = use the supplied palette and keep the default logo; C = use the supplied logo and palette. Recommend based on the materials available.
+- After collecting the required choices, summarize the selected plan and ask for one final confirmation before applying it. Then implement, validate, and show the real pages without repeatedly asking to proceed. Existing explicit confirmation is sufficient.
+- Keep cloud deployment and any external publication separate from confirmation of local brand configuration.
