@@ -1,0 +1,53 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "envId": "",
+  "functionRoot": "cloudbase/functions",
+  "functions": [
+    {
+      "name": "employeeWeb",
+      "type": "HTTP",
+      "timeout": 60,
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "description": "员工学习 H5 API"
+    },
+    {
+      "name": "adminData",
+      "type": "HTTP",
+      "timeout": 60,
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "description": "培训管理后台 API"
+    },
+    {
+      "name": "adminReview",
+      "type": "HTTP",
+      "timeout": 30,
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "description": "培训内容审核 API"
+    },
+    {
+      "name": "employeeReminder",
+      "type": "HTTP",
+      "timeout": 60,
+      "runtime": "Nodejs20.19",
+      "handler": "index.main",
+      "description": "员工学习自动提醒",
+      "envVariables": {
+        "WECHAT_OA_APPID": "",
+        "WECHAT_OA_APP_SECRET": "",
+        "WECHAT_NOTIFICATION_TEMPLATE_ID": "",
+        "WECHAT_NOTIFICATION_URL": "https://employee.example.com/employee/",
+        "REMINDER_RUN_SECRET": ""
+      },
+      "triggers": [
+        {
+          "name": "daily-learning-reminder",
+          "type": "timer",
+          "config": "0 0 9 * * * *"
+        }
+      ]
+    }
+  ]
+}

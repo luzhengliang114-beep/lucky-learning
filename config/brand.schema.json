@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/open-training-platform/brand.schema.json",
+  "title": "Open Training Platform Brand Configuration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "shortName",
+    "employeeSubtitle",
+    "adminSubtitle",
+    "privacyContact",
+    "headquartersName",
+    "logo",
+    "favicon",
+    "colors",
+    "features"
+  ],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "shortName": { "type": "string", "minLength": 1 },
+    "employeeSubtitle": { "type": "string", "minLength": 1 },
+    "adminSubtitle": { "type": "string", "minLength": 1 },
+    "privacyContact": { "type": "string", "minLength": 1 },
+    "headquartersName": { "type": "string", "minLength": 1 },
+    "defaultOrganizationId": { "type": "string" },
+    "logo": { "$ref": "#/$defs/brandAsset" },
+    "favicon": { "$ref": "#/$defs/brandAsset" },
+    "loginBackground": {
+      "anyOf": [
+        { "$ref": "#/$defs/brandAsset" },
+        { "const": "" }
+      ]
+    },
+    "colors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary", "accent", "progress", "surface", "text"],
+      "properties": {
+        "primary": { "$ref": "#/$defs/color" },
+        "accent": { "$ref": "#/$defs/color" },
+        "progress": { "$ref": "#/$defs/color" },
+        "surface": { "$ref": "#/$defs/color" },
+        "text": { "$ref": "#/$defs/color" }
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["speaking", "rewards", "ranking"],
+      "properties": {
+        "speaking": { "type": "boolean" },
+        "rewards": { "type": "boolean" },
+        "ranking": { "type": "boolean" }
+      }
+    }
+  },
+  "$defs": {
+    "brandAsset": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9][A-Za-z0-9._/-]*$"
+    },
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" }
+  }
+}

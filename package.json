@@ -1,0 +1,30 @@
+{
+  "name": "open-training-platform",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/admin",
+    "apps/employee",
+    "packages/shared"
+  ],
+  "scripts": {
+    "brand:setup": "vite apps/setup --host 127.0.0.1 --port 5175",
+    "brand:build": "vite build apps/setup",
+    "pretest": "npm run cloudbase:prepare-functions",
+    "test": "node --test tests/*.test.js",
+    "admin:dev": "npm --workspace apps/admin run dev",
+    "admin:build": "npm --workspace apps/admin run build",
+    "admin:preview": "npm --workspace apps/admin run preview",
+    "employee:dev": "npm --workspace apps/employee run dev",
+    "employee:build": "npm --workspace apps/employee run build",
+    "employee:preview": "npm --workspace apps/employee run preview",
+    "cloudbase:prepare-functions": "node scripts/prepare-cloud-functions.mjs",
+    "cloudbase:seed-command": "node scripts/build-cloudbase-seed-command.mjs",
+    "brand:validate": "node scripts/validate-brand.mjs",
+    "check:isolation": "node --test tests/openSourceIsolation.test.js",
+    "check:release": "node scripts/check-release-config.mjs",
+    "typecheck": "npm --workspace apps/admin run typecheck && npm --workspace apps/employee run typecheck",
+    "verify": "npm run brand:validate && npm test && npm run typecheck && npm run employee:build && npm run admin:build && npm run brand:build && npm run check:isolation",
+    "verify:release": "npm run verify && npm run check:release"
+  }
+}

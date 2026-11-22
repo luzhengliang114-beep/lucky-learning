@@ -1,0 +1,9 @@
+{
+  "environmentId": "",
+  "employeeApiEndpoint": "https://your-domain.example/employee-api",
+  "adminApiEndpoint": "https://your-domain.example/admin-api",
+  "employeeLoginMode": "wechat-oauth",
+  "employeeOAuthRedirectUri": "https://your-domain.example/employee/",
+  "adminAllowedOrigins": "https://your-domain.example",
+  "employeeAllowedOrigins": "https://your-domain.example"
+}

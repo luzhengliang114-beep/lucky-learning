@@ -1,0 +1,9 @@
+{
+  "name": "adminReview",
+  "version": "0.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudbase/node-sdk": "^3.6.0",
+    "ws": "^8.18.0"
+  }
+}

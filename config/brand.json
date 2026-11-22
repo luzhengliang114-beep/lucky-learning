@@ -1,0 +1,24 @@
+{
+  "name": "示例企业",
+  "shortName": "示例企业",
+  "employeeSubtitle": "员工学习中心",
+  "adminSubtitle": "员工学习管理后台",
+  "privacyContact": "请联系管理员",
+  "headquartersName": "总部",
+  "defaultOrganizationId": "",
+  "logo": "logo.svg",
+  "favicon": "logo.svg",
+  "loginBackground": "",
+  "colors": {
+    "primary": "#14532D",
+    "accent": "#0F766E",
+    "progress": "#FACC15",
+    "surface": "#F7FAF8",
+    "text": "#172033"
+  },
+  "features": {
+    "speaking": true,
+    "rewards": true,
+    "ranking": true
+  }
+}

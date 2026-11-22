@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "demo-store",
+    "name": "示例门店",
+    "regionId": "demo-region",
+    "brandId": "demo-brand",
+    "brandName": "示例企业",
+    "storeNo": "DEMO-001",
+    "address": "演示地址",
+    "organizationType": "store",
+    "status": "active",
+    "sourceKey": "demo-brand:demo-store"
+  }
+]

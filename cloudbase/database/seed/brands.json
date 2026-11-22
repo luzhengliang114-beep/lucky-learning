@@ -1,0 +1,8 @@
+[
+  {
+    "_id": "demo-brand",
+    "name": "示例企业",
+    "status": "active",
+    "sortOrder": 10
+  }
+]
